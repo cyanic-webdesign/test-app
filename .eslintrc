@@ -1,0 +1,27 @@
+{
+  "env": {
+    "es6": true,
+    "jasmine": true,
+    "node": true,
+    "browser": true
+  },
+ "globals": {
+    "expect": false,
+    "jest": false,
+    "webpackVars": true
+  },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "import/no-extraneous-dependencies": [0, {"devDependencies": [
+      "development/**/*",
+      "cypress/**/*",
+      "test/**/*",
+      "**/*-spec.js",
+      "**/*.stories.js",
+      "webpack.server.config.js"
+    ]}],
+    "import/named": 2,
+    "react/jsx-filename-extension": [2, { "extensions": [".js"] }]
+  }
+}
